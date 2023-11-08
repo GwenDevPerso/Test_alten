@@ -1,0 +1,19 @@
+<div class="container">
+  <app-table 
+    [data]="products"
+    [config]="config"
+    [editableRows]="true"
+    [deletableRows]="true" 
+    [selectable]="true"
+    [allowAdd]="true" 
+    [allowDelete]="true" 
+    [allowEdit]="true"
+    [entity]="entity" 
+    [totalRecords]="total"
+    [multiSelect]="true"
+    [lazy]="true"
+    (lazyLoaded)="onLazyLoad($event)"
+    (saved)="onSave($event)"
+    (deleted)="onDelete($event)"
+    ></app-table>
+</div>

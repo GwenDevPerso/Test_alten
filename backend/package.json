@@ -1,0 +1,40 @@
+{
+  "name": "alten-shop-front-products",
+  "version": "1.0.0",
+  "description": "Créer un module angular \"product\" avec 2 composants (basés sur primeng):   - **products-admin** : qui liste les produits et qui permet de les administrer (ajouter, supprimer, modifier).     Il doit être accessible à cette adresse : http://localhost:4200/admin/products  - **products** : qui liste les produits en mode lecture seule, comme sur une boutique en ligne.     Il doit être accessible à cette adresse : http://localhost:4200/products",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && nodemon dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.3",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.34.0",
+    "sequelize-cli": "^6.6.2",
+    "sequelize-typescript": "^2.1.5",
+    "sqlite3": "^5.1.6",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.15",
+    "@types/express": "^4.17.20",
+    "@types/node": "^20.8.10",
+    "@types/swagger-jsdoc": "^6.0.2",
+    "@types/swagger-ui-express": "^4.1.5",
+    "@types/uuid": "^9.0.6",
+    "@types/validator": "^13.11.5",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  }
+}

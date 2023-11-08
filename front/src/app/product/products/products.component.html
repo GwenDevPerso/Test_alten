@@ -1,0 +1,38 @@
+<div class="container">
+  <ng-template #listItem let-item>
+    <div>
+      <span class="flex align-items-center gap-2">
+        <i class="pi pi-tag"></i> </span>{{ item.category }}
+    </div>
+    <div>{{ item.inventoryStatus }}</div>
+    <div>{{ item.name }}</div>
+    <div>{{ item.description }}</div>
+    <p-rating [(ngModel)]="item.rating" [readonly]="true" [cancel]="false"></p-rating>
+    <div>
+      {{ item.price }}
+      <button pButton icon="pi pi-shopping-cart" class="md:align-self-end mb-2"></button>
+    </div>
+  </ng-template>
+
+  <ng-template #gridItem let-item>
+    <div class="col-12 center">
+      <div>
+        <span class="flex align-items-center gap-2">
+          <i class="pi pi-tag"></i> </span>{{ item.category }}
+      </div>
+      <div>{{ item.inventoryStatus }}</div>
+    </div>
+    <div class="col-12 center">
+      <div>{{ item.name }}</div>
+      <div>{{ item.description }}</div>
+      <p-rating [(ngModel)]="item.rating" [readonly]="true" [cancel]="false"></p-rating>
+    </div>
+    <div>
+      {{ item.price }}
+      <button pButton icon="pi pi-shopping-cart" class="md:align-self-end mb-2"></button>
+    </div>
+  </ng-template>
+  <app-list [items]="products" [listItemTemplate]="listItem" [gridItemTemplate]="gridItem" [backEndSearch]="true"
+    [pagination]="true" [totalRecords]="total" [sortOptions]="sortOptions" (filtered)="onFilterChange($event)"
+    (pageChanged)="onPageChange($event)"></app-list>
+</div>
